@@ -12,10 +12,10 @@ public class Test_1 {
     public static void main(String[] args) {
 
         Query query1 = Query.find(new Table("user"));
-        System.out.println(query1);
+        System.out.println(query1); // --> SELECT * FROM user
 
         Query query2 = Query.find(new Table("user", new Column[] { new Column("login"), new Column("senha") }));
-        System.out.println(query2);
+        System.out.println(query2); // --> SELECT login, senha FROM user
 
     }
 }
